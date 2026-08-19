@@ -1,3 +1,11 @@
+import sys
+
+# Ensure emoji/unicode output works on all consoles (e.g. Windows cp1252)
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
+
 print("🌟 Super Simple Converter 🌟")
 
 # Just temperature conversion to keep it simple
